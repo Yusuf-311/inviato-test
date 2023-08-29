@@ -45,6 +45,7 @@ export default function App() {
     }
   };
 
+  console.log(isPlaying);
   return (
     <div
       className="relative bg-no-repeat bg-cover rounded-lg "
