@@ -7,10 +7,13 @@ import { ReactComponent as Wave } from "../assets/images/wave.svg";
 export default function Welcome({ onClick }) {
   return (
     <div
-      className="relative items-start min-h-screen p-10 hero "
-      style={{ backgroundImage: `url(${background})` }}
+      className="relative items-start min-h-screen hero "
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
     >
-      <div className="animate__animated animate__fadeInUp ">
+      <div className="min-h-screen bg-slate-400 opacity-30 hero-overlay"></div>
+      <div className="animate__animated animate__fadeInUp mt-24 ">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -27,29 +30,34 @@ export default function Welcome({ onClick }) {
         </svg>
       </div>
 
-      <div className="mt-20 text-center text-white ">
+      <div className="mt-40 text-center text-white ">
         <div className="animate__animated animate__fadeInUp ">
-          <h2 className="tracking-widest text-center">THE WEDDING OF</h2>
-          <h2 className="text-4xl ">Nailal & Via</h2>
+          <h2 className="tracking-widest text-center font-thin">
+            THE WEDDING OF
+          </h2>
+          <h1 className="text-4xl ">Nailal & Via</h1>
         </div>
-        <button
-          className="absolute py-2 text-sm text-center text-white capitalize border-none rounded-full md:left-40 bg btn btn-sm px- animate__animated animate__pulse animate__infinite animate__slow bottom-1/4"
-          style={{ backgroundColor: "rgba(180, 197, 213, 0.8)" }}
-          onClick={onClick}
-        >
-          <TbMailOpenedFilled /> Open Invitation
-        </button>
-
-        <Wave className="absolute left-0 bottom-20" />
-        <div
-          className="absolute bottom-0 left-0 w-full p-6 wave-wrapper"
-          style={{ backgroundColor: "#B4C5D5" }}
-        >
-          <div className="font-medium text-center">
-            <p className="flex items-center justify-center ">
-              Created with by <AiFillHeart className="mx-2" /> Invitato
-            </p>
-            <p> © 2023 Nailal & Via. All Rights Reserved</p>
+        <div className="absolute bottom-1/4 text-center">
+          <button
+            className=" py-2 text-sm text-center text-white capitalize border-none rounded-full md:left-40 bg btn btn-sm  animate__animated animate__pulse animate__infinite animate__slow "
+            style={{ backgroundColor: "rgba(180, 197, 213, 0.8)" }}
+            onClick={onClick}
+          >
+            <TbMailOpenedFilled /> Open Invitation
+          </button>
+        </div>
+        <div className="text-white absolute bottom-0 left-0 right-0 mt-19 animate__backInUp">
+          <Wave className="" />
+          <div
+            className=" w-full wave-wrapper"
+            style={{ backgroundColor: "#B4C5D5" }}
+          >
+            <div className=" text-center pb-10 font-semibold">
+              <p className="flex items-center justify-center ">
+                Created with by <AiFillHeart className="mx-2" /> Invitato
+              </p>
+              <p> © 2023 Nailal & Via. All Rights Reserved</p>
+            </div>
           </div>
         </div>
       </div>

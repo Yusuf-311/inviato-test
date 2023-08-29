@@ -54,3 +54,21 @@ button:hover {
   grid-column-start: 1;
   grid-row-start: 1;
 }
+
+p,
+h2 {
+  font-family: "Jost", sans-serif;
+}
+
+.cover {
+  color: #67544e;
+}
+
+h1 {
+  font-family: "Clicker Script", cursive;
+}
+
+.fixed button {
+  background-color: #9b7065;
+  color: white;
+}
