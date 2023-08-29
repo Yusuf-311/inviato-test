@@ -39,9 +39,14 @@ export default function App() {
   }, []);
 
   const handleClick = () => {
-    play();
-    setIsPlaying(true);
-    setShowWelcome2(true);
+    if (isPlaying) {
+      pause();
+      setIsPlaying(false);
+    } else {
+      play();
+      setIsPlaying(true);
+      setShowWelcome2(true);
+    }
   };
 
   return (
